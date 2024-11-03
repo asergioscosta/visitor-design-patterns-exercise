@@ -7,10 +7,10 @@ class PessoaVisitorTest {
 
     @Test
     void deveRetornarExibirComprador() {
-        Comprador comprador = new Comprador(1, "Augusto", 4);
+        Comprador comprador = new Comprador(1, "Augusto", new Produto("Arroz"));
         PessoaVisitor visitor = new PessoaVisitor();
 
-        assertEquals("Comprador{id=1, nomeComprador='Augusto', quantidadeProduto=4}", visitor.exibir(comprador));
+        assertEquals("Comprador{id=1, nomeComprador='Augusto', nome=Arroz}", visitor.exibir(comprador));
     }
 
     @Test

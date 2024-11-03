@@ -6,36 +6,24 @@ public class Comprador implements Pessoa {
 
     private String nomeComprador;
 
-    private int quantidadeProduto;
+    private Produto produto;
 
-    public Comprador(int id, String nomeComprador, int quantidadeProduto) {
+    public Comprador(int id, String nomeComprador, Produto produto) {
         this.id = id;
         this.nomeComprador = nomeComprador;
-        this.quantidadeProduto = quantidadeProduto;
+        this.produto = produto;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getNomeComprador() {
         return nomeComprador;
     }
 
-    public void setNomeComprador(String nomeComprador) {
-        this.nomeComprador = nomeComprador;
-    }
-
-    public int getQuantidadeProduto() {
-        return quantidadeProduto;
-    }
-
-    public void setQuantidadeProduto(int quantidadeProduto) {
-        this.quantidadeProduto = quantidadeProduto;
+    public String getNomeProduto() {
+        return this.produto.getNome();
     }
 
     public String aceitar(Visitor visitor) {

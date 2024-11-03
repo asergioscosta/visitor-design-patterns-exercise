@@ -11,7 +11,7 @@ public class PessoaVisitor implements Visitor {
         return "Comprador{" +
                 "id=" + comprador.getId() +
                 ", nomeComprador='" + comprador.getNomeComprador() + '\'' +
-                ", quantidadeProduto=" + comprador.getQuantidadeProduto() +
+                ", nome=" + comprador.getNomeProduto() +
                 '}';
     }
 
